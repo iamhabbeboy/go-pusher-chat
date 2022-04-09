@@ -1,0 +1,4 @@
+/vue-go-chat/node_modules
+/vue-go-chat/.vscode
+.DS_Store
+.idea/
