@@ -20,10 +20,12 @@ func main() {
 
 	app.Use(cors.New())
 
+	fmt.Println(os.Getenv("APP_ID"))
+
 	pusherClient := pusher.Client{
 		AppID:   os.Getenv("APP_ID"),
 		Key:     os.Getenv("TOKEN_KEY"),
-		Secret:  os.Getenv("TOKEN_SECRET"),
+		Secret:  os.Getenv("SECRET_KEY"),
 		Cluster: "eu",
 		Secure:  true,
 	}
