@@ -2,3 +2,6 @@
 /vue-go-chat/.vscode
 .DS_Store
 .idea/
+
+/vue-go-chat/.env
+/go-chat/.env
