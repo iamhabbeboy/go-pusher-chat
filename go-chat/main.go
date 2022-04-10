@@ -20,8 +20,6 @@ func main() {
 
 	app.Use(cors.New())
 
-	fmt.Println(os.Getenv("APP_ID"))
-
 	pusherClient := pusher.Client{
 		AppID:   os.Getenv("APP_ID"),
 		Key:     os.Getenv("TOKEN_KEY"),
@@ -39,7 +37,7 @@ func main() {
 
 		pusherClient.Trigger("chat", "message", data)
 
-		return c.JSON([]string{})
+		return c.JSON(map[string]string{"status": "success"})
 	})
 
 	log.Fatal(app.Listen(":8000"))
